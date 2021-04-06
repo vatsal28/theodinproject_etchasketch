@@ -1,14 +1,20 @@
 //Create 16x16 grid of divs with class box
+function myFunction(){
+   let inputdiv = prompt("Enter the grid size","16");
+    console.log(inputdiv);
+    let gridsize = Number(inputdiv)*Number(inputdiv);
 let htmlElements = "";
-for (let i = 0; i<256;i++){
+for (let i = 0; i<gridsize;i++){
     htmlElements+='<div class="box"></div>';
 }
 let container = document.getElementById("container");
 container.innerHTML = htmlElements;
+container.style.setProperty('--repeatcolumns',Number(inputdiv));
+container.style.setProperty('--maxvalue',Number(inputdiv)*20);
 
 //Function for changing the color of div when hovering
 function changeDefOver(e){
-    e.target.style.backgroundColor = "pink";
+    e.target.style.backgroundColor = "seagreen";
 }
 
 //Select all divs having the class box
@@ -18,3 +24,8 @@ let test = document.getElementsByClassName('box');
 for (let i = 0; i < test.length ; i++){
     test[i].addEventListener('mouseover',changeDefOver)
 }
+
+
+}
+
+

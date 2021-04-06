@@ -1,9 +1,16 @@
+:root{
+    --repeatcolumns: #999;
+    --maxvalue: #999;
+    /* --repeatrows: #059; */
+}
+
 .box{
     text-align: center;
     height:20px;
     width:20px;
     border:0.5px solid black;
     display:grid;
+    margin:auto;
 }
 
 /* .box:hover{
@@ -12,14 +19,14 @@
 
 #container{
     padding:2%;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     display: grid;
-    max-height: 320px;
-    max-width: 320px;;
-    grid-template-columns: repeat(16, 20px);
-    grid-template-rows:  repeat(16, 20px);
-    /* border: 2px solid black; */
+    max-height: var(--maxvalue);
+    max-width: var(--maxvalue);
+    grid-template-columns: repeat(var(--repeatcolumns), 20px);
+    grid-template-rows:  repeat(var(--repeatcolumns), 20px);
+    border: 2px solid black;
     /* background-color:pink */
 }
 
