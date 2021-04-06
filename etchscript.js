@@ -14,7 +14,7 @@ container.style.setProperty('--maxvalue',Number(inputdiv)*20);
 
 //Function for changing the color of div when hovering
 function changeDefOver(e){
-    e.target.style.backgroundColor = "seagreen";
+    e.target.style.backgroundColor = "#"+ Math.floor(Math.random()*16777215).toString(16);
 }
 
 //Select all divs having the class box
